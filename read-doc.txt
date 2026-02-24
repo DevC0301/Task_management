@@ -1,0 +1,94 @@
+Project: Task management API
+Goal: Users create, assign, and track tasks.
+
+Core idea:
+
+Users → Tasks → Permissions → Status tracking
+
+✅ 2. Define user roles
+
+Roles determine access boundaries.
+
+Admin
+- manage users
+- view all tasks
+
+Manager
+- assign tasks
+- monitor progress
+
+User
+- create/update own tasks
+
+
+This prevents permission chaos later.
+
+✅ 3. List features
+
+Start simple — feature clarity prevents scope creep.
+
+Authentication (login/logout)
+Task CRUD
+Task assignment
+Role-based access
+Status tracking
+Activity logging
+Notifications (future)
+
+
+Each feature becomes an implementation milestone.
+
+✅ 4. Design API endpoints
+
+Keep REST-style and predictable.
+
+POST   /auth/login
+POST   /auth/logout
+
+GET    /tasks
+POST   /tasks
+PATCH  /tasks/:id
+DELETE /tasks/:id
+
+PATCH  /tasks/:id/assign
+GET    /users
+
+Endpoints reflect resources, not UI behavior.
+
+✅ 5. Plan folder structure
+Layered structure prevents spaghetti growth.
+src/
+  config/
+  models/
+  controllers/
+  services/
+  middleware/
+  routes/
+  utils/
+  validators/
+  app.js
+Each layer has a single responsibility.
+
+6. Outline security strategy
+Security is architectural, not optional.
+JWT authentication
+Role-based authorization middleware
+Request validation
+Rate limiting
+Central error handling
+Secure cookies/tokens
+Logging
+
+Plan trust boundaries early.
+🧠 What this planning achieves
+You now have:
+clear scope
+defined access rules
+predictable API
+organized architecture
+security foundation
+
+Coding becomes execution — not guesswork.
+✅ Compact mental model
+Idea → Roles → Features → API → Structure → Security
+Follow this order, and backend complexity stays controlled.
