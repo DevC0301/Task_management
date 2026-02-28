@@ -37,22 +37,22 @@ Middleware Architecture
 
 
 Authentication Routes
-Base URL: /api/auth
+Base URL: /auth
 
 Method	Endpoint	Access	Description
-POST	/register	Public	Register new user
-POST	/login	Public	Login user
-POST	/refresh	Public	Refresh access token
-POST	/logout	Protected	Logout user
+POST	https://task-management-732l.onrender.com/auth/register	Public	Register new user
+POST	https://task-management-732l.onrender.com/auth/login	Public	Login user
+POST	https://task-management-732l.onrender.com/auth/refresh	Public	Refresh access token
+POST	https://task-management-732l.onrender.com/auth/logout	Protected	Logout user
 📋 Task Routes
 
-Base URL: /api/tasks
+Base URL: /tasks
 
 All routes require authentication.
 
 Method	Endpoint	Access	Description
-POST	/	Admin	Create task
-GET	/	Authenticated	Get tasks
-PUT	/:id	Authenticated	Update task
-DELETE	/:id	Admin	Delete task
-PUT	/:id/assign	Admin	Assign task
+POST	https://task-management-732l.onrender.com/tasks  	        Admin	Create task
+GET	    https://task-management-732l.onrender.com/tasks 	        Authenticated	Get tasks
+PUT	    https://task-management-732l.onrender.com/tasks/:id	        Authenticated	Update task
+DELETE	https://task-management-732l.onrender.com/tasks/:id	        Admin	Delete task
+PUT	    https://task-management-732l.onrender.com/tasks/:id/assign	Admin	Assign task
